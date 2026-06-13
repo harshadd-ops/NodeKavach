@@ -52,7 +52,7 @@ RECOMMENDED ACTION    : ${
       : "Routine logging"
   }
 
-Prepared by MULEFLAGGER · BOI × IITH CyberShield Hackathon 2026`;
+Prepared by NodeKavach · BOI × IITH CyberShield Hackathon 2026`;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-6" onClick={onClose}>

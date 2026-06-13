@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🛡️ MULEFLAGGER
+# 🛡️ NodeKavach
 
 ### Intelligence Against Financial Crime
 
@@ -22,7 +22,7 @@ and generate an investigation narrative for each flagged account — all running
 
 ---
 
-> **MULEFLAGGER is not a fraud classifier — it is a fraud-intelligence operating system.**
+> **NodeKavach is not a fraud classifier — it is a fraud-intelligence operating system.**
 > Every decision is explainable. Every alert has a story. Every flagged account gets an
 > AI-generated investigation narrative — produced by a **local** LLM, with **zero external API calls** at runtime.
 
@@ -31,7 +31,7 @@ and generate an investigation narrative for each flagged account — all running
 ## Table of contents
 
 - [The problem](#the-problem)
-- [What MULEFLAGGER does](#what-muleflagger-does)
+- [What NodeKavach does](#what-nodekavach-does)
 - [Results](#results)
 - [The F3912 leakage story](#the-f3912-leakage-story)
 - [Architecture](#architecture)
@@ -49,7 +49,7 @@ and generate an investigation narrative for each flagged account — all running
 
 Mule accounts are the laundering rails of digital financial crime — ordinary-looking
 accounts recruited (or synthetically created) to receive and forward stolen funds.
-Detecting them is a **needle-in-a-haystack** problem. MULEFLAGGER is developed against a
+Detecting them is a **needle-in-a-haystack** problem. NodeKavach is developed against a
 representative anonymised banking dataset with exactly these characteristics:
 
 - **9,082 accounts**, **3,924 anonymised features** (`F1`–`F3924`)
@@ -58,12 +58,12 @@ representative anonymised banking dataset with exactly these characteristics:
 - **27.6 % missing values**, including **63 fully-null columns**
 
 A model that flags *nobody* scores **99.1 % accuracy** while catching **zero mules**.
-MULEFLAGGER is built around that reality: it optimises for **PR-AUC**, treats *missingness
+NodeKavach is built around that reality: it optimises for **PR-AUC**, treats *missingness
 as signal*, explains every verdict, and is honest about feature leakage.
 
 ---
 
-## What MULEFLAGGER does
+## What NodeKavach does
 
 | Capability | How |
 |------------|-----|
@@ -105,7 +105,7 @@ flags **80 of 81 mules**.
 in the entire dataset — the textbook signature of a **post-labelling leakage feature**
 (one that is only populated *after* an account is confirmed fraudulent).
 
-Naively keeping it yields a perfect-but-meaningless score. MULEFLAGGER instead
+Naively keeping it yields a perfect-but-meaningless score. NodeKavach instead
 **trains both models and surfaces the gap**:
 
 - **Model A** keeps F3912 → PR-AUC **1.000** (presented with a leakage warning banner).
@@ -226,7 +226,7 @@ Five pre-built demo accounts load **instantly from cache** — no upload require
 ## Project structure
 
 ```
-MULEFLAGGER/
+NodeKavach/
 ├── app/                  React + TypeScript + Vite + Tailwind frontend
 │   └── src/
 │       ├── api/          Typed API client + response interfaces
@@ -272,7 +272,7 @@ Every analyzer/engine ships a standalone self-test: `python -m app.engines.<name
 
 <div align="center">
 
-**MULEFLAGGER** · XGBoost (Model B) · SHAP-attributed analysis · local Ollama
+**NodeKavach** · XGBoost (Model B) · SHAP-attributed analysis · local Ollama
 Intelligence Against Financial Crime
 
 </div>

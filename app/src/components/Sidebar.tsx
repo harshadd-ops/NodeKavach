@@ -13,7 +13,7 @@ export default function Sidebar() {
     <aside className="w-[220px] shrink-0 bg-bg border-r border-border flex flex-col">
       <div className="px-5 py-5 border-b border-border">
         <div className="font-display font-bold text-[20px] tracking-tight text-textPrimary">
-          MULE<span className="text-accent">FLAGGER</span>
+          Node<span className="text-accent">Kavach</span>
         </div>
         <div className="font-mono text-[10px] text-textMuted mt-1 tracking-wide">
           INTELLIGENCE AGAINST FINANCIAL CRIME

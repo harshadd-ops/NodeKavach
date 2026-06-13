@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import type { Severity } from "../api/types";
 import { scoreColor } from "../lib/severity";
 
-// The signature MULEFLAGGER risk gauge: a 240° SVG arc, colour-coded by score,
+// The signature NodeKavach risk gauge: a 240° SVG arc, colour-coded by score,
 // with the score in 72px Space Grotesk at the centre, a severity label below,
 // a severity-matched glow, and a fill animation on load (0 -> score, 600ms).
 

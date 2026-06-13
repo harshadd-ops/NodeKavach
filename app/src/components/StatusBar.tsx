@@ -43,7 +43,7 @@ export default function StatusBar() {
           Backend unreachable at /api. Start the FastAPI server on :8000.
         </span>
       )}
-      <span className="ml-auto text-textMuted">MULEFLAGGER v1.0 · on-premises · no external calls</span>
+      <span className="ml-auto text-textMuted">NodeKavach v1.0 · on-premises · no external calls</span>
     </div>
   );
 }
